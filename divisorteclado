@@ -1,0 +1,39 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date:    23:15:56 01/07/2014 
+// Design Name: 
+// Module Name:    Divisor_Teclado 
+// Project Name: 
+// Target Devices: 
+// Tool versions: 
+// Description: 
+//
+// Dependencies: 
+//
+// Revision: 
+// Revision 0.01 - File Created
+// Additional Comments: 
+//
+//////////////////////////////////////////////////////////////////////////////////
+module Divisor_Teclado(clk_T,t);
+	
+	input clk_T;  
+	output t;
+	
+	reg [16:0]cont;
+
+	initial begin
+		cont=0;
+		
+	end
+
+	assign t=cont[16];
+	
+	always @(posedge clk_T)
+		
+			cont<=cont+1'b1;
+		
+endmodule 
